@@ -82,25 +82,39 @@ function initComparisonSlider() {
    -------------------------------------------------------------------------- */
 const audioTracks = [
   {
-    title: 'Cybernetic Overture (Original Score)',
-    genre: 'Cinematic Synth-Orchestral Score',
-    tempo: 110,
+    title: 'La Espera',
+    genre: 'Banda Sonora Original',
+    tempo: 80,
     cover: '/cover1.png',
-    src: '/desde-cero.mp3'
+    src: '/music/La%20Espera.mp3'
   },
   {
-    title: 'Analog Echoes (Modular Study)',
-    genre: 'Ambient Atmospheric Soundscape',
-    tempo: 90,
+    title: 'Mi Juego',
+    genre: 'Composición Cinematográfica',
+    tempo: 95,
     cover: '/imagen2.png',
-    src: ''
+    src: '/music/Mi%20Juego.mp3'
   },
   {
-    title: 'Nocturne in Charcoal',
-    genre: 'Acoustic Cello & Synth Hybrid',
-    tempo: 75,
+    title: 'Primera Revelación',
+    genre: 'Ambient Orchestral',
+    tempo: 70,
     cover: '/imagen3.png',
-    src: ''
+    src: '/music/Primera%20Revelacion.mp3'
+  },
+  {
+    title: 'Pulsaciones',
+    genre: 'Electronic Score',
+    tempo: 110,
+    cover: '/imagen1.png',
+    src: '/music/Pulsaciones.mp3'
+  },
+  {
+    title: 'Visita Nocturna',
+    genre: 'Dark Ambient',
+    tempo: 65,
+    cover: '/imagen4.png',
+    src: '/music/Visita%20Nocturna.mp3'
   }
 ];
 
