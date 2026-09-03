@@ -85,19 +85,22 @@ const audioTracks = [
     title: 'Cybernetic Overture (Original Score)',
     genre: 'Cinematic Synth-Orchestral Score',
     tempo: 110,
-    cover: '/imagen1.png'
+    cover: '/cover1.png',
+    src: '/desde-cero.mp3'
   },
   {
     title: 'Analog Echoes (Modular Study)',
     genre: 'Ambient Atmospheric Soundscape',
     tempo: 90,
-    cover: '/imagen2.png'
+    cover: '/imagen2.png',
+    src: ''
   },
   {
     title: 'Nocturne in Charcoal',
     genre: 'Acoustic Cello & Synth Hybrid',
     tempo: 75,
-    cover: '/imagen3.png'
+    cover: '/imagen3.png',
+    src: ''
   }
 ];
 
@@ -108,29 +111,57 @@ let animFrameId = null;
 function initAudioPlayer() {
   const playBtn = document.getElementById('play-pause-btn');
   const canvas = document.getElementById('waveform-canvas');
+  const audio = document.getElementById('audio-player');
   if (!playBtn || !canvas) return;
 
   playBtn.addEventListener('click', toggleAudioPlay);
+
+  if (audio) {
+    audio.addEventListener('ended', function() {
+      isPlaying = false;
+      const playSymbol = playBtn.querySelector('.play-symbol');
+      playSymbol.textContent = '▶';
+      playBtn.style.boxShadow = '0 6px 20px rgba(56, 189, 248, 0.4)';
+    });
+  }
+
   renderWaveformCanvas();
 }
 
 function toggleAudioPlay() {
-  isPlaying = !isPlaying;
+  const audio = document.getElementById('audio-player');
   const playBtn = document.getElementById('play-pause-btn');
   const playSymbol = playBtn.querySelector('.play-symbol');
+  const track = audioTracks[currentTrackIdx];
+
+  if (!audio.src || audio.src === window.location.href) {
+    if (track.src) {
+      audio.src = track.src;
+      audio.load();
+    } else {
+      isPlaying = false;
+      playSymbol.textContent = '▶';
+      return;
+    }
+  }
 
   if (isPlaying) {
-    playSymbol.textContent = '⏸';
-    playBtn.style.boxShadow = '0 0 25px #38bdf8';
-  } else {
+    audio.pause();
     playSymbol.textContent = '▶';
     playBtn.style.boxShadow = '0 6px 20px rgba(56, 189, 248, 0.4)';
+    isPlaying = false;
+  } else {
+    audio.play();
+    playSymbol.textContent = '⏸';
+    playBtn.style.boxShadow = '0 0 25px #38bdf8';
+    isPlaying = true;
   }
 }
 
 window.switchTrack = function(idx) {
   currentTrackIdx = idx;
   const track = audioTracks[idx];
+  const audio = document.getElementById('audio-player');
 
   document.getElementById('audio-title').textContent = track.title;
   document.getElementById('audio-genre').textContent = track.genre;
@@ -141,8 +172,14 @@ window.switchTrack = function(idx) {
     p.classList.toggle('active', i === idx);
   });
 
-  if (!isPlaying) {
-    toggleAudioPlay();
+  if (track.src) {
+    audio.src = track.src;
+    audio.load();
+    if (!isPlaying) {
+      toggleAudioPlay();
+    } else {
+      audio.play();
+    }
   }
 };
 
