@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TAPIAH - Personal Creative Showcase</title>
+  <meta name="description" content="Portafolio personal: AI-Assisted Digital Product Designer, Filmmaker, Film & Video Editor, Pastel & Charcoal Artist, Music Composer.">
+  
+  <link rel="canonical" href="https://www.tapiah.cl/">
+  <meta property="og:title" content="PABLO TAPIA — Showcase Creativo Personal">
+  <meta property="og:description" content="Trabajo personal en Diseño de Productos con IA, Dirección Cinematográfica, Edición de Video, Arte con Carboncillo & Pastel, y Composición Musical.">
+  <meta property="og:url" content="https://www.tapiah.cl/">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+  <!-- Full-page background video -->
+  <video class="site-bg-video" autoplay muted loop playsinline>
+    <source src="/slide1.mp4" type="video/mp4">
+  </video>
+  <div class="site-bg-overlay"></div>
+
+  <!-- Ambient Spotlight Canvas Background -->
+  <canvas id="spotlight-canvas"></canvas>
+  <div class="bg-grid-overlay"></div>
+  <div class="glow-orb glow-orb-1"></div>
+  <div class="glow-orb glow-orb-2"></div>
+  <div class="glow-orb glow-orb-3"></div>
+
+  <!-- Header Navigation -->
+  <header class="site-header">
+    <div class="header-container">
+      <!--  
+      <a href="#" class="brand-logo">
+        <img src="/tapiah-logo.png" alt="TAPIAH — Showcase Creativo Personal" class="brand-logo-img">
+      </a> -->
+
+      <nav class="main-nav">
+        <a href="#" class="nav-link active">Inicio</a>
+        <a href="#disciplines" class="nav-link">Disciplinas</a>
+        <a href="#process" class="nav-link">Proceso</a>
+        <a href="#contact" class="nav-link">Contacto</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="#contact" class="btn-primary pill-btn">
+          <span>Hablemos</span>
+          <svg class="btn-arrow" viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section (Personal Creator Focus) -->
+  <section class="hero-section" id="about">
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-tag-pill">
+          <span class="pill-dot"></span>
+          <span>PERSONAL CREATIVE SHOWCASE</span>
+        </div>
+        <h1 class="hero-title">
+          Explorando <span class="highlight-text">Cine, Código, Bellas Artes</span> & Sonido
+        </h1>
+        <p class="hero-description">
+          En este espacio conviven proyectos multidisciplinarios que conectan inteligencia artificial, diseño de productos digitales, dirección cinematográfica, post-producción, arte tradicional y composición musical.
+        </p>
+        <div><img height="166" src="/tapiah-logo-color.png"></div>
+          
+        <div style="display:none;" class="hero-stats-row">
+          <div class="hero-stat-card glass-panel">
+            <span class="stat-num">5</span>
+            <span class="stat-label">Disciplinas Creativas</span>
+          </div>
+          <div class="hero-stat-card glass-panel">
+            <span class="stat-num">10+</span>
+            <span class="stat-label">Años de Oficio</span>
+          </div>
+          <div class="hero-stat-card glass-panel">
+            <span class="stat-num">Chile</span>
+            <span class="stat-label">& Remoto Global</span>
+          </div>
+        </div>
+
+
+      </div>
+
+      <!-- Lunetra Reference Style Featured Glass Widget (Personal Showcase) -->
+      <div class="hero-widget-column">
+        <div class="lunetra-hero-card glass-card tilt-card">
+          <div class="card-glow-edge"></div>
+          <div class="card-header-bar">
+            <div class="card-chip">
+              <span class="chip-icon">✦</span>
+              <span>TRABAJO DESTACADO</span>
+            </div>
+            <div class="card-signal">
+              <span class="pulse-ring"></span>
+              <span>www.tapiah.cl</span>
+            </div>
+          </div>
+
+          <div class="card-media-preview">
+            <img src="/imagen2.png" alt="Multidisciplinary Creator" id="hero-preview-img" class="card-img" />
+            <div class="media-overlay-gradient"></div>
+            <div class="floating-badge badge-top-right glass-panel">
+              <span class="badge-val">Oficio Personal</span>
+              <span class="badge-sub">Diseño & Código</span>
+            </div>
+            <div class="floating-badge badge-bottom-left glass-panel">
+              <span class="badge-title">Enfoque Multidisciplinario</span>
+              <span class="badge-sub">Arte + Ingeniería</span>
+            </div>
+          </div>
+
+          <div class="card-footer-info">
+            <h3 class="card-title" id="hero-card-title">AI-Assisted Digital Product Designer</h3>
+            <p class="card-desc" id="hero-card-desc">Mi exploración de IA generativa, sistemas de diseño e interfaces espaciales.</p>
+            <div class="card-tags-row" id="hero-card-tags">
+              <span class="tech-tag">UI/UX</span>
+              <span class="tech-tag">Flujos de Trabajo IA</span>
+              <span class="tech-tag">Sistemas de Diseño</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Sticky Module Discipline Navigation -->
+  <section class="disciplines-nav-section" id="disciplines">
+    <div class="section-container">
+      <div class="disciplines-header">
+        <h2 class="section-title">Las 5 <span class="highlight-text">áreas creativas</span></h2>
+        <p class="section-subtitle">Obras personales, stacks técnicos y proyectos artísticos por disciplina.</p>
+      </div>
+
+      <div class="discipline-tabs-container glass-panel">
+        <button class="discipline-tab" data-discipline="ai-designer" onclick="openModuleModal('ai-designer')">
+          <span class="tab-icon">🤖</span>
+          <span class="tab-label">AI PRODUCT DESIGNER</span>
+        </button>
+        <button class="discipline-tab" data-discipline="filmmaker" onclick="openModuleModal('filmmaker')">
+          <span class="tab-icon">🎬</span>
+          <span class="tab-label">FILMMAKER</span>
+        </button>
+        <button class="discipline-tab" data-discipline="video-editor" onclick="openModuleModal('video-editor')">
+          <span class="tab-icon">✂️</span>
+          <span class="tab-label">FILM & VIDEO EDITOR</span>
+        </button>
+        <button class="discipline-tab" data-discipline="charcoal-artist" onclick="openModuleModal('charcoal-artist')">
+          <span class="tab-icon">🎨</span>
+          <span class="tab-label">PASTEL & CHARCOAL ARTIST</span>
+        </button>
+        <button class="discipline-tab" data-discipline="music-composer" onclick="document.getElementById('music-composer-section').scrollIntoView({behavior: 'smooth'})">
+          <span class="tab-icon">🎵</span>
+          <span class="tab-label">MUSIC COMPOSER</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Modules Grid Section -->
+  <section class="modules-grid-section" id="matrix">
+    <div class="section-container">
+      <div class="modules-grid">
+
+        <!-- MODULE 1: AI-ASSISTED DIGITAL PRODUCT DESIGNER (WHITE STUDIO MODULE) -->
+        <article class="module-card glass-card module-card-light" data-module="ai-designer">
+          <div class="module-card-header">
+            <div class="module-index">01</div>
+            <div class="module-badge">ESTUDIO DE DISEÑO & ESPACIO DE TRABAJO</div>
+          </div>
+          <div class="module-media-container">
+            <img src="/imagen4.png" alt="AI-Assisted Digital Product Designer Workspace" class="module-img" />
+            <div class="module-hover-overlay">
+              <button class="btn-demo pill-btn" onclick="openModuleModal('ai-designer')">
+                <span>Explorar Estudio de Trabajo</span>
+                <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+              </button>
+            </div>
+          </div>
+          <div class="module-content">
+            <h3 class="module-index">AI-ASSISTED DIGITAL PRODUCT DESIGNER</h3>
+            <p class="module-desc">
+              Aprovechando redes neuronales, flujos de trabajo de IA generativa, tokens de diseño en Figma y código web moderno para construir rápidamente experiencias web espaciales e intuitivas.
+            </p>
+            <div class="module-specs-grid">
+              <div class="spec-item">
+                <span class="spec-label">El Enfoque</span>
+                <span class="spec-val">Wireframing con IA y Prototipado Generativo</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Herramientas</span>
+                <span class="spec-val">Midjourney, ComfyUI, Figma, React, Vite</span>
+              </div>
+            </div>
+            <div class="module-tags">
+              <span class="tag">UI Espacial</span>
+              <span class="tag">Flujos de Trabajo IA</span>
+              <span class="tag">Sistemas de Diseño</span>
+              <span class="tag">Código Frontend</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- MODULE 2: FILMMAKER -->
+        <article class="module-card glass-card" data-module="filmmaker">
+          <div class="module-card-header">
+            <div class="module-index">02</div>
+            <div class="module-badge">DIRECCIÓN & CINE</div>
+          </div>
+          <div class="module-media-container">
+            <img src="/assets/filmmaker_hero.jpg" alt="Filmmaker & Director" class="module-img" />
+            <div class="module-hover-overlay">
+              <button class="btn-demo pill-btn" onclick="openModuleModal('filmmaker')">
+                <span class="play-icon">▶</span>
+                <span>Ver Showreel</span>
+              </button>
+            </div>
+            <div class="floating-pill-badge bottom-right">
+              <span class="badge-dot pulse-red"></span>
+              <span>4K Cinema RAW</span>
+            </div>
+          </div>
+          <div class="module-content">
+            <h3 class="module-title">FILMMAKER</h3>
+            <p class="module-desc">
+              Capturando cortometrajes narrativos, ensayos visuales e historias de marca enfocadas en atmósfera, movimiento de cámara intencional, encuadre anamórfico y emoción humana.
+            </p>
+            <div class="module-specs-grid">
+              <div class="spec-item">
+                <span class="spec-label">Formato Cinematográfico</span>
+                <span class="spec-val">2.39:1 Anamórfico / 4K Cine Digital</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Proyectos Seleccionados</span>
+                <span class="spec-val">Cortometrajes Narrativos, Documentales Visuales</span>
+              </div>
+            </div>
+            <div class="module-tags">
+              <span class="tag">Dirección</span>
+              <span class="tag">Cinematografía</span>
+              <span class="tag">Escultura de Luz</span>
+              <span class="tag">Storyboard</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- MODULE 3: FILM & VIDEO EDITOR -->
+        <article class="module-card glass-card" data-module="video-editor">
+          <div class="module-card-header">
+            <div class="module-index">03</div>
+            <div class="module-badge">POST-PRODUCCIÓN & COLOR</div>
+          </div>
+
+          <!-- Interactive Before / After Color Grade Comparison Slider Container -->
+          <div class="comparison-container" id="editor-comparison">
+            <div class="comparison-img img-before" style="background-image: url('/assets/video_editing.jpg'); filter: grayscale(80%) sepia(20%) brightness(0.7);">
+              <span class="comp-label label-before">METRAJE RAW LOG</span>
+            </div>
+            <div class="comparison-img img-after" id="comparison-after" style="background-image: url('/assets/video_editing.jpg');">
+              <span class="comp-label label-after">GRADACIÓN FINAL & VFX</span>
+            </div>
+            <input type="range" min="0" max="100" value="50" class="comp-slider" id="comp-range-slider">
+            <div class="comp-handle" id="comp-handle-line">
+              <div class="handle-button">↔</div>
+            </div>
+            <div class="module-hover-overlay">
+              <button class="btn-demo pill-btn" onclick="openModuleModal('video-editor')">
+                <span class="play-icon">▶</span>
+                <span>Ver Proyectos de Edición</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="module-content">
+            <h3 class="module-title">FILM & VIDEO EDITOR</h3>
+            <p class="module-desc" id="music-composer-section">
+              La post-producción es donde la historia cobra vida. Edicio con ritmo y cadencia, cortes de audio-video fluidos, y gradación de color en DaVinci Resolve usando LUTs personalizados de emulación de película y ciencia del color ACES.
+            </p>
+            <div class="module-specs-grid">
+              <div class="spec-item">
+                <span class="spec-label">Suite de Edición</span>
+                <span class="spec-val">DaVinci Resolve Studio, Premiere Pro</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Ciencia del Color</span>
+                <span class="spec-val">ACES, ACEScc, Emulación de Película</span>
+              </div>
+            </div>
+            <div class="module-tags">
+              <span class="tag">Gradación de Color</span>
+              <span class="tag">Ritmo y Cadencia</span>
+              <span class="tag">Integración VFX</span>
+              <span class="tag">Sincronización de Audio</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- MODULE 4: PASTEL & CHARCOAL ARTIST -->
+        <article class="module-card glass-card" data-module="charcoal-artist">
+          <div class="module-card-header">
+            <div class="module-index">04</div>
+            <div class="module-badge">BELLAS ARTES & OFICIO ANALÓGICO</div>
+          </div>
+          <div class="module-media-container">
+            <img src="/assets/charcoal_pastel_art.jpg" alt="Pastel & Charcoal Artist" class="module-img" />
+            <div class="module-hover-overlay">
+              <button class="btn-demo pill-btn" onclick="openCharcoalGallery()">
+                <span class="zoom-icon">🔍</span>
+                <span>Ampliar Galería de Arte</span>
+              </button>
+            </div>
+          </div>
+          <div class="module-content">
+            <h3 class="module-title">PASTEL & CHARCOAL ARTIST</h3>
+            <p class="module-desc">
+              Práctica de arte tradicional: trabajando con carboncillo de sauce físico, textura cruda del papel, pasteles suaves y contraste intenso de claroscuro para capturar la emoción humana en retrato táctil.
+            </p>
+            <div class="module-specs-grid">
+              <div class="spec-item">
+                <span class="spec-label">Medio Físico</span>
+                <span class="spec-val">Carboncillo de Sauce, Pastel Suave, Papel de Algodón</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Técnica</span>
+                <span class="spec-val">Claroscuro, Borrado Sustractivo y Difuminado</span>
+              </div>
+            </div>
+            <div class="module-tags">
+              <span class="tag">Retrato</span>
+              <span class="tag">Textura Física</span>
+              <span class="tag">Claroscuro</span>
+              <span class="tag">Obras Originales</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- MODULE 5: MUSIC COMPOSER -->
+        <article class="module-card glass-card" data-module="music-composer">
+          <div class="module-card-header">
+            <div class="module-index">05</div>
+            <div class="module-badge">SONIDO & BANDAS SONORAS</div>
+          </div>
+
+          <!-- Interactive Audio Player Section -->
+          <div class="audio-player-container glass-panel">
+            <div class="audio-player-layout">
+              <div class="audio-cover-wrapper">
+                <img src="/imagen1.png" alt="Album Cover" class="audio-cover-img" id="audio-cover-img">
+              </div>
+              <div class="audio-player-right">
+                <div class="audio-info-row">
+                  <div class="audio-track-details">
+                    <span class="track-status">ESCUCHA LAS COMPOSICIONES DE PABLO</span>
+                    <h4 class="track-title" id="audio-title">Cybernetic Overture (Banda Sonora Original)</h4>
+                    <span class="track-genre" id="audio-genre">Partitura Sintetizador-Orquestal Cinematográfica</span>
+                  </div>
+                  <button class="audio-play-btn" id="play-pause-btn" title="Play Track">
+                    <span class="play-symbol">▶</span>
+                  </button>
+                </div>
+
+                <!-- Animated Canvas Audio Waveform -->
+                <div class="waveform-container">
+                  <canvas id="waveform-canvas" width="500" height="40"></canvas>
+                </div>
+
+                <div class="track-selector-pills">
+                  <button class="track-pill active" onclick="switchTrack(0)">01. Cybernetic Overture</button>
+                  <button class="track-pill" onclick="switchTrack(1)">02. Analog Echoes</button>
+                  <button class="track-pill" onclick="switchTrack(2)">03. Nocturne in Charcoal</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="module-content">
+            <h3 class="module-title">MUSIC COMPOSER</h3>
+            <p class="module-desc">
+              Creando bandas sonoras originales, paisajes sonoros ambientales, texturas de sintetizadores analógicos y arreglos acústicos emotivos diseñados para películas, instalaciones y videojuegos.
+            </p>
+            <div class="module-specs-grid">
+              <div class="spec-item">
+                <span class="spec-label">Instrumentos</span>
+                <span class="spec-val">Sintetizadores Analógicos, Cuerdas Acústicas, Pads Ambientales</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">DAW y Configuración</span>
+                <span class="spec-val">Logic Pro, Ableton Live, Sintetizadores Modulares</span>
+              </div>
+            </div>
+            <div class="module-tags" id="process">
+              <span class="tag">Composición para Cine</span>
+              <span class="tag">Diseño Sonoro</span>
+              <span class="tag">Síntesis Modular</span>
+              <span class="tag">Pistas Originales</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Process & Philosophy Section -->
+  <section class="process-section">
+    <div class="section-container">
+      <div class="process-header">
+        <span class="section-tag">FILOSOFÍA CREATIVA</span>
+        <h2 class="section-title">Las Disciplinas <span class="highlight-text">Convergen</span></h2>
+        <p class="section-subtitle">Un enfoque creativo holístico donde el código, la imagen, la textura y el sonido se informan mutuamente.</p>
+      </div>
+
+      <div class="process-steps-grid">
+        <div class="process-card glass-card process-card-light">
+          <div class="step-num">01</div>
+          <h3 class="step-title" id="contact">Prototipado con IA y Código</h3>
+          <p class="step-desc">Usando modelos neuronales y código como extensiones creativas para prototipar rápidamente conceptos espaciales e ideas visuales.</p>
+        </div>
+        <div class="process-card glass-card">
+          <div class="step-num">02</div>
+          <h3 class="step-title">Lente Cinematográfico</h3>
+          <p class="step-desc">Aplicando principios de dirección cinematográfica — encuadre, luz, emoción y narrativa — a cada pieza de media que creo.</p>
+        </div>
+        <div class="process-card glass-card process-card-light">
+          <div class="step-num">03</div>
+          <h3 class="step-title">Sensibilidad Analógica</h3>
+          <p class="step-desc">Llevando la sensación cruda y física del carboncillo y el papel a entornos digitales limpios.</p>
+        </div>
+        <div class="process-card glass-card">
+          <div class="step-num">04</div>
+          <h3 class="step-title">Profundidad Sónica</h3>
+          <p class="step-desc">Componiendo paisajes sonoros personalizados para asegurar que cada proyecto visual tenga una identidad acústica distintiva.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Collaboration Section (Personal) -->
+  <section class="contact-section">
+    <div class="section-container">
+      <div class="contact-card glass-card">
+        <div class="contact-glow"></div>
+        <div class="contact-header">
+          <span class="section-tag">CONECTEMOS</span>
+          <h2 class="contact-title">¿Tienes un Proyecto o <span class="highlight-text">Idea en Mente?</span></h2>
+          <p class="contact-subtitle">Déjalo aca abajo y lo conversamos.</p>
+        </div>
+
+        <form class="contact-form" id="contact-form" onsubmit="handleFormSubmit(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name" class="form-label">TU NOMBRE</label>
+              <input type="text" id="name" required placeholder="ej. María González" class="glass-input">
+            </div>
+            <div class="form-group">
+              <label for="email" class="form-label">TU CORREO ELECTRÓNICO</label>
+              <input type="email" id="email" required placeholder="maria@dominio.com" class="glass-input">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">¿EN QUÉ TE GUSTARÍA COLABORAR?</label>
+            <div class="checkbox-pills-row">
+              <label class="checkbox-pill"><input type="checkbox" name="module" value="AI Product Design"> <span>Diseño de Producto con IA</span></label>
+              <label class="checkbox-pill"><input type="checkbox" name="module" value="Filmmaking"> <span>Dirección Cinematográfica</span></label>
+              <label class="checkbox-pill"><input type="checkbox" name="module" value="Video Editing"> <span>Color y Edición de Video</span></label>
+              <label class="checkbox-pill"><input type="checkbox" name="module" value="Fine Art"> <span>Arte con Carboncillo</span></label>
+              <label class="checkbox-pill"><input type="checkbox" name="module" value="Music Score"> <span>Banda Sonora Musical</span></label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="message" class="form-label">DETALLES DEL PROYECTO / MENSAJE</label>
+            <textarea id="message" rows="4" required placeholder="Escribe tu mensaje o consulta aquí..." class="glass-input"></textarea>
+          </div>
+
+          <button type="submit" class="btn-primary form-submit-btn pill-btn">
+            <span>Enviar Mensaje Directo</span>
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+          </button>
+          <div class="form-status" id="form-status"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <a href="#" class="brand-logo">
+          <img src="/logo-genofy.webp" alt="TAPIAH" class="brand-logo-img footer-logo-img">
+        </a>
+      </div>
+      <p class="footer-copy">© 2026 <a href="https://www.tapiah.cl" target="_blank" class="footer-domain-link">www.tapiah.cl</a>. Personal Creative Showcase. Desarrollado por Genofy.</p>
+      <div class="footer-links">
+        <a href="#" class="footer-link">Inicio</a>
+        <a href="#disciplines" class="footer-link">Disciplinas</a>
+        <a href="#process" class="footer-link">Proceso</a>
+        <a href="#contact" class="footer-link">Contacto</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox Gallery Modal -->
+  <div class="modal-overlay" id="lightbox-modal">
+    <div class="modal-content glass-card">
+      <button class="modal-close" onclick="closeLightbox()">&times;</button>
+      <img src="" alt="Zoomed Artwork" id="lightbox-img" class="lightbox-image">
+      <p class="lightbox-caption" id="lightbox-caption"></p>
+    </div>
+  </div>
+
+  <!-- Detail Module Showcase Modal -->
+  <div class="modal-overlay" id="module-detail-modal">
+    <div class="modal-content glass-card module-modal-content">
+      <button class="modal-close" onclick="closeModuleModal()">&times;</button>
+      <div id="module-modal-body"></div>
+    </div>
+  </div>
+
+  <!-- Video Showreel Modal (Spotify-style) -->
+  <div class="modal-overlay" id="video-showreel-modal">
+    <div class="video-modal-content">
+      <button class="modal-close video-modal-close" onclick="closeVideoModal()">&times;</button>
+      
+      <div class="video-modal-header">
+        <span class="video-modal-tag">SHOWREEL CINEMATOGRÁFICO</span>
+        <h2 class="video-modal-title">Dirección y <span class="highlight-text">Narrativa Visual</span></h2>
+      </div>
+
+      <div class="video-cards-row">
+          <div class="video-card active" data-video-index="0" onclick="selectVideo(0)">
+            <div class="video-card-img">
+              <img src="/imagen3.png" alt="Atmósfera Urbana">
+              <div class="video-card-overlay">
+                <span class="play-icon">▶</span>
+              </div>
+            </div>
+            <div class="video-card-info">
+              <span class="video-card-title">Atmósfera Urbana</span>
+              <span class="video-card-sub">Cortometraje • 2024</span>
+            </div>
+          </div>
+          
+          <div class="video-card" data-video-index="1" onclick="selectVideo(1)">
+            <div class="video-card-img">
+              <img src="/imagen2.png" alt="Luz y Sombra">
+              <div class="video-card-overlay">
+                <span class="play-icon">▶</span>
+              </div>
+            </div>
+            <div class="video-card-info">
+              <span class="video-card-title">Luz y Sombra</span>
+              <span class="video-card-sub">Ensayo Visual • 2024</span>
+            </div>
+          </div>
+          
+          <div class="video-card" data-video-index="2" onclick="selectVideo(2)">
+            <div class="video-card-img">
+              <img src="/imagen1.png" alt="Raíces">
+              <div class="video-card-overlay">
+                <span class="play-icon">▶</span>
+              </div>
+            </div>
+            <div class="video-card-info">
+              <span class="video-card-title">Raíces</span>
+              <span class="video-card-sub">Documental • 2023</span>
+            </div>
+          </div>
+
+          <div class="video-card" data-video-index="3" onclick="selectVideo(3)">
+            <div class="video-card-img">
+              <img src="/imagen4.png" alt="Construcción Digital">
+              <div class="video-card-overlay">
+                <span class="play-icon">▶</span>
+              </div>
+            </div>
+            <div class="video-card-info">
+              <span class="video-card-title">Construcción Digital</span>
+              <span class="video-card-sub">Brand Film • 2023</span>
+            </div>
+          </div>
+
+          <div class="video-card" data-video-index="4" onclick="selectVideo(4)">
+            <div class="video-card-img">
+              <img src="/imagen3.png" alt="Ensayo Lumínico">
+              <div class="video-card-overlay">
+                <span class="play-icon">▶</span>
+              </div>
+            </div>
+            <div class="video-card-info">
+              <span class="video-card-title">Ensayo Lumínico</span>
+              <span class="video-card-sub">Cortometraje • 2023</span>
+            </div>
+          </div>
+      </div>
+
+      <p class="video-modal-desc">Selecciona un proyecto para reproducir. Explorando cinematografía anamórfica 4K RAW, bloqueo narrativo de personajes y escultura de luz.</p>
+
+      <div class="video-player-section">
+        <div class="video-player-wrapper">
+          <div id="filmmaker-video-container" class="showreel-video-player"></div>
+        </div>
+
+        <div class="video-player-controls glass-panel">
+          <div class="player-track-info">
+            <img id="player-thumb" src="/imagen3.png" alt="Thumbnail" class="player-thumb">
+            <div class="player-text-info">
+              <span class="player-track-name" id="player-track-name">Atmósfera Urbana</span>
+              <span class="player-track-sub" id="player-track-sub">Cortometraje • 2024</span>
+            </div>
+          </div>
+
+          <div class="player-center-controls">
+            <button class="player-ctrl-btn" onclick="prevVideo()">
+              <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"><path d="M19 20L9 12l10-8v16zM5 19V5"/></svg>
+            </button>
+            <button class="player-ctrl-btn play-pause-btn" id="video-play-pause-btn" onclick="toggleVideoPlay()">
+              <span id="video-play-icon">▶</span>
+            </button>
+            <button class="player-ctrl-btn" onclick="nextVideo()">
+              <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"><path d="M5 4l10 8-10 8V4zM19 5v14"/></svg>
+            </button>
+          </div>
+
+          <div class="player-progress-section">
+            <span class="player-time" id="player-current-time">0:00</span>
+            <div class="progress-bar-container" onclick="seekVideo(event)">
+              <div class="progress-bar" id="video-progress-bar"></div>
+            </div>
+            <span class="player-time" id="player-duration">0:00</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-awards-row">
+        <div class="award-badge glass-panel">
+          <span class="award-icon">🏆</span>
+          <span class="award-text">Nominado a Mejor Cinematografía</span>
+        </div>
+        <div class="award-badge glass-panel">
+          <span class="award-icon">🎬</span>
+          <span class="award-text">Festival Internacional 2025</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Video Editor Modal (Spotify-style) -->
+  <div class="modal-overlay" id="editor-showreel-modal">
+    <div class="video-modal-content">
+      <button class="modal-close video-modal-close" onclick="closeEditorModal()">&times;</button>
+      
+      <div class="video-modal-header">
+        <span class="video-modal-tag">POST-PRODUCCIÓN & COLOR</span>
+        <h2 class="video-modal-title">Edición y <span class="highlight-text">Gradación de Color</span></h2>
+      </div>
+
+      <div class="video-cards-row">
+          <div class="video-card active" data-editor-index="0" onclick="selectEditorVideo(0)">
+            <div class="video-card-img">
+              <img src="/imagen4.png" alt="Showreel Edición 2024">
+              <div class="video-card-overlay">
+                <span class="play-icon">▶</span>
+              </div>
+            </div>
+            <div class="video-card-info">
+              <span class="video-card-title">Showreel Edición 2024</span>
+              <span class="video-card-sub">Reel Personal • 2024</span>
+            </div>
+          </div>
+          
+          <div class="video-card" data-editor-index="1" onclick="selectEditorVideo(1)">
+            <div class="video-card-img">
+              <img src="/imagen4.png" alt="Gradación Cinematográfica">
+              <div class="video-card-overlay">
+                <span class="play-icon">▶</span>
+              </div>
+            </div>
+            <div class="video-card-info">
+              <span class="video-card-title">Gradación Cinematográfica</span>
+              <span class="video-card-sub">DaVinci Resolve • 2024</span>
+            </div>
+          </div>
+          
+          <div class="video-card" data-editor-index="2" onclick="selectEditorVideo(2)">
+            <div class="video-card-img">
+              <img src="/imagen3.png" alt="Cortometraje Raíces">
+              <div class="video-card-overlay">
+                <span class="play-icon">▶</span>
+              </div>
+            </div>
+            <div class="video-card-info">
+              <span class="video-card-title">Cortometraje "Raíces"</span>
+              <span class="video-card-sub">Edición & Color • 2024</span>
+            </div>
+          </div>
+          
+          <div class="video-card" data-editor-index="3" onclick="selectEditorVideo(3)">
+            <div class="video-card-img">
+              <img src="/imagen2.png" alt="Ensayo Visual Luz">
+              <div class="video-card-overlay">
+                <span class="play-icon">▶</span>
+              </div>
+            </div>
+            <div class="video-card-info">
+              <span class="video-card-title">Ensayo Visual "Luz"</span>
+              <span class="video-card-sub">Post-Producción • 2023</span>
+            </div>
+          </div>
+
+          <div class="video-card" data-editor-index="4" onclick="selectEditorVideo(4)">
+            <div class="video-card-img">
+              <img src="/imagen1.png" alt="Spot Publicitario">
+              <div class="video-card-overlay">
+                <span class="play-icon">▶</span>
+              </div>
+            </div>
+            <div class="video-card-info">
+              <span class="video-card-title">Spot Publicitario</span>
+              <span class="video-card-sub">VFX & Color • 2023</span>
+            </div>
+          </div>
+      </div>
+
+      <p class="video-modal-desc">Selecciona un proyecto para ver el proceso de edición y gradación de color.</p>
+
+      <div class="video-player-section">
+        <div class="video-player-wrapper">
+          <div id="editor-video-container" class="showreel-video-player"></div>
+        </div>
+
+        <div class="video-player-controls glass-panel">
+          <div class="player-track-info">
+            <img id="editor-thumb" src="/imagen4.png" alt="Thumbnail" class="player-thumb">
+            <div class="player-text-info">
+              <span class="player-track-name" id="editor-track-name">Gradación Cinematográfica</span>
+              <span class="player-track-sub" id="editor-track-sub">DaVinci Resolve • 2024</span>
+            </div>
+          </div>
+
+          <div class="player-center-controls">
+            <button class="player-ctrl-btn" onclick="prevEditorVideo()">
+              <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"><path d="M19 20L9 12l10-8v16zM5 19V5"/></svg>
+            </button>
+            <button class="player-ctrl-btn play-pause-btn" id="editor-play-pause-btn" onclick="toggleEditorPlay()">
+              <span id="editor-play-icon">▶</span>
+            </button>
+            <button class="player-ctrl-btn" onclick="nextEditorVideo()">
+              <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"><path d="M5 4l10 8-10 8V4zM19 5v14"/></svg>
+            </button>
+          </div>
+
+          <div class="player-progress-section">
+            <span class="player-time" id="editor-current-time">0:00</span>
+            <div class="progress-bar-container" onclick="seekEditorVideo(event)">
+              <div class="progress-bar" id="editor-progress-bar"></div>
+            </div>
+            <span class="player-time" id="editor-duration">0:00</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- AI Designer Gallery Modal -->
+  <div class="modal-overlay" id="ai-gallery-modal">
+    <div class="gallery-modal-content">
+      <button class="modal-close video-modal-close" onclick="closeAIGallery()">&times;</button>
+      
+      <div class="gallery-modal-header">
+        <span class="video-modal-tag">ESTUDIO DE DISEÑO</span>
+        <h2 class="video-modal-title">Galería de <span class="highlight-text">Proyectos IA</span></h2>
+      </div>
+
+      <div class="masonry-grid" id="ai-gallery-grid">
+        <div class="masonry-item masonry-item-wide" onclick="openGalleryLightbox('/imagen4.png', 'UI Espacial — Dashboard Interactivo')">
+          <img src="/imagen4.png" alt="UI Espacial">
+          <div class="masonry-overlay">
+            <span class="masonry-zoom">🔍</span>
+          </div>
+        </div>
+        <div class="masonry-item" onclick="openGalleryLightbox('/imagen2.png', 'Sistema de Diseño — Componentes')">
+          <img src="/imagen2.png" alt="Sistema de Diseño">
+          <div class="masonry-overlay">
+            <span class="masonry-zoom">🔍</span>
+          </div>
+        </div>
+        <div class="masonry-item" onclick="openGalleryLightbox('/imagen1.png', 'Prototipo Generativo — Wireframes')">
+          <img src="/imagen1.png" alt="Prototipo Generativo">
+          <div class="masonry-overlay">
+            <span class="masonry-zoom">🔍</span>
+          </div>
+        </div>
+        <div class="masonry-item" onclick="openGalleryLightbox('/imagen3.png', 'Flujo de Trabajo IA — Pipeline')">
+          <img src="/imagen3.png" alt="Flujo de Trabajo IA">
+          <div class="masonry-overlay">
+            <span class="masonry-zoom">🔍</span>
+          </div>
+        </div>
+        <div class="masonry-item masonry-item-tall" onclick="openGalleryLightbox('/imagen2.png', 'App Móvil — Diseño Final')">
+          <img src="/imagen2.png" alt="App Móvil">
+          <div class="masonry-overlay">
+            <span class="masonry-zoom">🔍</span>
+          </div>
+        </div>
+        <div class="masonry-item" onclick="openGalleryLightbox('/imagen4.png', 'Branding — Identidad Visual')">
+          <img src="/imagen4.png" alt="Branding">
+          <div class="masonry-overlay">
+            <span class="masonry-zoom">🔍</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Charcoal Artist Gallery Modal -->
+  <div class="modal-overlay" id="charcoal-gallery-modal">
+    <div class="gallery-modal-content">
+      <button class="modal-close video-modal-close" onclick="closeCharcoalGallery()">&times;</button>
+      
+      <div class="gallery-modal-header">
+        <span class="video-modal-tag">BELLAS ARTES</span>
+        <h2 class="video-modal-title">Galería de <span class="highlight-text">Arte en Carboncillo</span></h2>
+      </div>
+
+      <div class="masonry-grid" id="charcoal-gallery-grid">
+        <div class="masonry-item masonry-item-tall" onclick="openGalleryLightbox('/imagen1.png', 'El Filósofo Anciano — Carboncillo y Pastel')">
+          <img src="/imagen1.png" alt="El Filósofo Anciano">
+          <div class="masonry-overlay">
+            <span class="masonry-zoom">🔍</span>
+          </div>
+        </div>
+        <div class="masonry-item" onclick="openGalleryLightbox('/imagen3.png', 'Retrato — Claroscuro en Papel')">
+          <img src="/imagen3.png" alt="Retrato Claroscuro">
+          <div class="masonry-overlay">
+            <span class="masonry-zoom">🔍</span>
+          </div>
+        </div>
+        <div class="masonry-item masonry-item-wide" onclick="openGalleryLightbox('/imagen2.png', 'Serie Sombras — Borrado Sustractivo')">
+          <img src="/imagen2.png" alt="Serie Sombras">
+          <div class="masonry-overlay">
+            <span class="masonry-zoom">🔍</span>
+          </div>
+        </div>
+        <div class="masonry-item" onclick="openGalleryLightbox('/imagen4.png', 'Estudio de Manos — Carboncillo')">
+          <img src="/imagen4.png" alt="Estudio de Manos">
+          <div class="masonry-overlay">
+            <span class="masonry-zoom">🔍</span>
+          </div>
+        </div>
+        <div class="masonry-item" onclick="openGalleryLightbox('/imagen1.png', 'Retrato Femenino — Pastel Suave')">
+          <img src="/imagen1.png" alt="Retrato Femenino">
+          <div class="masonry-overlay">
+            <span class="masonry-zoom">🔍</span>
+          </div>
+        </div>
+        <div class="masonry-item masonry-item-tall" onclick="openGalleryLightbox('/imagen3.png', 'Naturaleza Muerta — Chiaroscuro')">
+          <img src="/imagen3.png" alt="Naturaleza Muerta">
+          <div class="masonry-overlay">
+            <span class="masonry-zoom">🔍</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Gallery Lightbox Modal -->
+  <div class="modal-overlay" id="gallery-lightbox-modal">
+    <div class="gallery-lightbox-content">
+      <button class="modal-close video-modal-close" onclick="closeGalleryLightbox()">&times;</button>
+      <img src="" alt="Galería" id="gallery-lightbox-img" class="gallery-lightbox-image">
+      <p class="lightbox-caption" id="gallery-lightbox-caption"></p>
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
