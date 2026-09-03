@@ -92,28 +92,28 @@ const audioTracks = [
     title: 'Mi Juego',
     genre: 'Composición Cinematográfica',
     tempo: 95,
-    cover: '/imagen2.png',
+    cover: '/cover1.png',
     src: '/music/Mi%20Juego.mp3'
   },
   {
     title: 'Primera Revelación',
     genre: 'Ambient Orchestral',
     tempo: 70,
-    cover: '/imagen3.png',
+    cover: '/cover1.png',
     src: '/music/Primera%20Revelacion.mp3'
   },
   {
     title: 'Pulsaciones',
     genre: 'Electronic Score',
     tempo: 110,
-    cover: '/imagen1.png',
+    cover: '/cover1.png',
     src: '/music/Pulsaciones.mp3'
   },
   {
     title: 'Visita Nocturna',
     genre: 'Dark Ambient',
     tempo: 65,
-    cover: '/imagen4.png',
+    cover: '/cover1.png',
     src: '/music/Visita%20Nocturna.mp3'
   }
 ];
