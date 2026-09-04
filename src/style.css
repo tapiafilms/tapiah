@@ -1994,6 +1994,9 @@ body {
   .main-nav {
     display: none;
   }
+  .disciplines-nav-section {
+    display: none;
+  }
   .hero-section {
     padding: 50px 16px 30px;
   }
