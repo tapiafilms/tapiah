@@ -1989,30 +1989,48 @@ body {
     display: none;
   }
   .hero-section {
-    padding: 70px 16px 50px;
+    padding: 50px 16px 30px;
   }
   .hero-ambient-text {
-    font-size: 2.5rem;
-    letter-spacing: 6px;
-    top: 15px;
+    font-size: 1.5rem;
+    letter-spacing: 4px;
+    top: 10px;
+  }
+  .hero-container {
+    gap: 20px;
+  }
+  .hero-tag-pill {
+    font-size: 0.6rem;
+    padding: 4px 10px;
+    margin-bottom: 12px;
   }
   .hero-title {
-    font-size: 2rem;
+    font-size: 1.5rem;
+    margin-bottom: 12px;
   }
   .hero-description {
-    font-size: 1rem;
-    margin-bottom: 24px;
+    font-size: 0.85rem;
+    margin-bottom: 16px;
+    line-height: 1.5;
   }
   .hero-stats-row {
-    flex-direction: column;
-    gap: 10px;
+    flex-direction: row;
+    gap: 8px;
+    margin-bottom: 16px;
   }
   .hero-stat-card {
+    padding: 10px 12px;
     min-width: unset;
+  }
+  .stat-num {
+    font-size: 1.2rem;
+  }
+  .stat-label {
+    font-size: 0.65rem;
   }
   .hero-cta-group {
     flex-direction: column;
-    gap: 12px;
+    gap: 10px;
   }
   .hero-cta-group .btn-primary {
     width: 100%;
