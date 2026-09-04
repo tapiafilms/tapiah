@@ -10,6 +10,23 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* --------------------------------------------------------------------------
+   0. MOBILE MENU
+   -------------------------------------------------------------------------- */
+window.toggleMobileMenu = function() {
+  const burger = document.getElementById('burger-btn');
+  const menu = document.getElementById('mobile-menu');
+  burger.classList.toggle('active');
+  menu.classList.toggle('active');
+};
+
+window.closeMobileMenu = function() {
+  const burger = document.getElementById('burger-btn');
+  const menu = document.getElementById('mobile-menu');
+  burger.classList.remove('active');
+  menu.classList.remove('active');
+};
+
+/* --------------------------------------------------------------------------
    1. AMBIENT SPOTLIGHT CANVAS TRACKER
    -------------------------------------------------------------------------- */
 function initSpotlightCanvas() {

@@ -34,10 +34,6 @@
   <!-- Header Navigation -->
   <header class="site-header">
     <div class="header-container">
-      <!--  
-      <a href="#" class="brand-logo">
-        <img src="/tapiah-logo.png" alt="TAPIAH — Showcase Creativo Personal" class="brand-logo-img">
-      </a> -->
 
       <nav class="main-nav">
         <a href="#" class="nav-link active">Inicio</a>
@@ -52,6 +48,22 @@
           <svg class="btn-arrow" viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
       </div>
+
+      <button class="burger-btn" id="burger-btn" onclick="toggleMobileMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="#" class="mobile-link" onclick="closeMobileMenu()">Inicio</a>
+      <a href="#disciplines" class="mobile-link" onclick="closeMobileMenu()">Disciplinas</a>
+      <a href="#process" class="mobile-link" onclick="closeMobileMenu()">Proceso</a>
+      <a href="#contact" class="mobile-link" onclick="closeMobileMenu()">Contacto</a>
+      <a href="#contact" class="btn-primary pill-btn mobile-cta" onclick="closeMobileMenu()">
+        <span>Hablemos</span>
+      </a>
     </div>
   </header>
 
