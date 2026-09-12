@@ -1838,6 +1838,54 @@ body {
   margin-bottom: 10px;
 }
 
+.video-poster {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.6s ease;
+}
+
+.video-poster.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.video-poster-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-poster-play {
+  position: relative;
+  z-index: 1;
+  width: 64px;
+  height: 64px;
+  background: rgba(56, 189, 248, 0.85);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #fff;
+  box-shadow: 0 0 30px rgba(56, 189, 248, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.video-poster:hover .video-poster-play {
+  transform: scale(1.1);
+}
+
 .showreel-video-player {
   width: 100%;
   height: 100%;

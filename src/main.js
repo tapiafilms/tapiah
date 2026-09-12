@@ -446,7 +446,18 @@ function updateFilmmakerProgressLoop() {
   requestAnimationFrame(updateFilmmakerProgressLoop);
 }
 
+window.playFromPoster = function() {
+  const poster = document.getElementById('filmmaker-poster');
+  if (poster) poster.classList.add('hidden');
+  if (!filmmakerYTPlayer) return;
+  filmmakerYTPlayer.playVideo();
+};
+
 window.toggleVideoPlay = function() {
+  const poster = document.getElementById('filmmaker-poster');
+  if (poster && !poster.classList.contains('hidden')) {
+    poster.classList.add('hidden');
+  }
   if (!filmmakerYTPlayer) return;
   if (isVideoPlaying) {
     filmmakerYTPlayer.pauseVideo();
@@ -480,6 +491,13 @@ function updateVideoPlayer(idx) {
   document.getElementById('player-track-name').textContent = track.title;
   document.getElementById('player-track-sub').textContent = track.sub;
   document.getElementById('player-thumb').src = track.thumb;
+  
+  const poster = document.getElementById('filmmaker-poster');
+  if (poster) {
+    poster.classList.remove('hidden');
+    poster.querySelector('.video-poster-img').src = track.thumb;
+  }
+  
   document.querySelectorAll('#video-showreel-modal .video-card').forEach(function(card, i) {
     card.classList.toggle('active', i === idx);
   });
