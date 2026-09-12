@@ -649,7 +649,18 @@ window.moveEditorCarousel = function(dir) {
   carousel.style.transition = 'transform 0.4s cubic-bezier(0.16, 1, 0.3, 1)';
 };
 
+window.playFromEditorPoster = function() {
+  const poster = document.getElementById('editor-poster');
+  if (poster) poster.classList.add('hidden');
+  if (!editorYTPlayer) return;
+  editorYTPlayer.playVideo();
+};
+
 window.toggleEditorPlay = function() {
+  const poster = document.getElementById('editor-poster');
+  if (poster && !poster.classList.contains('hidden')) {
+    poster.classList.add('hidden');
+  }
   if (!editorYTPlayer) return;
   if (isEditorPlaying) {
     editorYTPlayer.pauseVideo();
@@ -683,6 +694,13 @@ function updateEditorPlayer(idx) {
   document.getElementById('editor-track-name').textContent = track.title;
   document.getElementById('editor-track-sub').textContent = track.sub;
   document.getElementById('editor-thumb').src = track.thumb;
+  
+  const poster = document.getElementById('editor-poster');
+  if (poster) {
+    poster.classList.remove('hidden');
+    poster.querySelector('.video-poster-img').src = track.thumb;
+  }
+  
   document.querySelectorAll('#editor-carousel .video-card').forEach(function(card, i) {
     card.classList.toggle('active', i === idx);
   });
