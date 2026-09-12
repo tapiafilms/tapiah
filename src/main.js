@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initSpotlightCanvas();
   initComparisonSlider();
   initAudioPlayer();
+  initAudioPlayer2();
   init3DTiltCards();
 });
 
@@ -198,7 +199,8 @@ window.switchTrack = function(idx) {
   document.getElementById('audio-genre').textContent = track.genre;
   document.getElementById('audio-cover-img').src = track.cover;
 
-  const pills = document.querySelectorAll('.track-pill');
+  const container = document.querySelector('.audio-player-container');
+  const pills = container.querySelectorAll('.track-pill');
   pills.forEach((p, i) => {
     p.classList.toggle('active', i === idx);
   });
@@ -208,6 +210,91 @@ window.switchTrack = function(idx) {
     audio.load();
     if (!isPlaying) {
       toggleAudioPlay();
+    } else {
+      audio.play();
+    }
+  }
+};
+
+/* Second Album Player */
+const audioTracks2 = [
+  { title: 'Mentor I (Apertura)', genre: 'Composición Orquestal', cover: '/cover1.png', src: '' },
+  { title: 'Desarrollo', genre: 'Cinematic Score', cover: '/cover1.png', src: '' },
+  { title: 'Clímax', genre: 'Epic Orchestral', cover: '/cover1.png', src: '' },
+  { title: 'Resolución', genre: 'Ambient Final', cover: '/cover1.png', src: '' }
+];
+
+let isPlaying2 = false;
+let currentTrackIdx2 = 0;
+
+function initAudioPlayer2() {
+  const playBtn = document.getElementById('play-pause-btn-2');
+  const canvas = document.getElementById('waveform-canvas-2');
+  const audio = document.getElementById('audio-player-2');
+  if (!playBtn || !canvas) return;
+
+  playBtn.addEventListener('click', toggleAudioPlay2);
+
+  if (audio) {
+    audio.addEventListener('ended', function() {
+      isPlaying2 = false;
+      const playSymbol = playBtn.querySelector('.play-symbol');
+      playSymbol.textContent = '▶';
+      playBtn.style.boxShadow = '0 6px 20px rgba(56, 189, 248, 0.4)';
+    });
+  }
+}
+
+function toggleAudioPlay2() {
+  const audio = document.getElementById('audio-player-2');
+  const playBtn = document.getElementById('play-pause-btn-2');
+  const playSymbol = playBtn.querySelector('.play-symbol');
+  const track = audioTracks2[currentTrackIdx2];
+
+  if (!audio.src || audio.src === window.location.href) {
+    if (track.src) {
+      audio.src = track.src;
+      audio.load();
+    } else {
+      isPlaying2 = false;
+      playSymbol.textContent = '▶';
+      return;
+    }
+  }
+
+  if (isPlaying2) {
+    audio.pause();
+    playSymbol.textContent = '▶';
+    playBtn.style.boxShadow = '0 6px 20px rgba(56, 189, 248, 0.4)';
+    isPlaying2 = false;
+  } else {
+    audio.play();
+    playSymbol.textContent = '⏸';
+    playBtn.style.boxShadow = '0 0 25px #38bdf8';
+    isPlaying2 = true;
+  }
+}
+
+window.switchTrack2 = function(idx) {
+  currentTrackIdx2 = idx;
+  const track = audioTracks2[idx];
+  const audio = document.getElementById('audio-player-2');
+
+  document.getElementById('audio-title-2').textContent = track.title;
+  document.getElementById('audio-genre-2').textContent = track.genre;
+  document.getElementById('audio-cover-img-2').src = track.cover;
+
+  const container = document.querySelectorAll('.audio-player-container')[1];
+  const pills = container.querySelectorAll('.track-pill');
+  pills.forEach((p, i) => {
+    p.classList.toggle('active', i === idx);
+  });
+
+  if (track.src) {
+    audio.src = track.src;
+    audio.load();
+    if (!isPlaying2) {
+      toggleAudioPlay2();
     } else {
       audio.play();
     }
