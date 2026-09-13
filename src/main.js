@@ -218,10 +218,10 @@ window.switchTrack = function(idx) {
 
 /* Second Album Player */
 const audioTracks2 = [
-  { title: 'Mentor I (Apertura)', genre: 'Composición Orquestal', cover: '/cover1.png', src: '' },
-  { title: 'Desarrollo', genre: 'Cinematic Score', cover: '/cover1.png', src: '' },
-  { title: 'Clímax', genre: 'Epic Orchestral', cover: '/cover1.png', src: '' },
-  { title: 'Resolución', genre: 'Ambient Final', cover: '/cover1.png', src: '' }
+  { title: 'Mentor I (Apertura)', genre: 'Composición Orquestal', cover: '/cover2.png', src: '/music/Mentor%20-%20Desde%20Cero.wav' },
+  { title: 'Desarrollo', genre: 'Cinematic Score', cover: '/cover2.png', src: '' },
+  { title: 'Clímax', genre: 'Epic Orchestral', cover: '/cover2.png', src: '' },
+  { title: 'Resolución', genre: 'Ambient Final', cover: '/cover2.png', src: '' }
 ];
 
 let isPlaying2 = false;
