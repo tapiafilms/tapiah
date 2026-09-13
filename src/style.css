@@ -1230,6 +1230,15 @@ body {
   box-shadow: 0 8px 30px rgba(56, 189, 248, 0.6);
 }
 
+.audio-play-btn-orange {
+  background: linear-gradient(135deg, #f97316 0%, #fb923c 100%);
+  box-shadow: 0 6px 20px rgba(249, 115, 22, 0.4);
+}
+
+.audio-play-btn-orange:hover {
+  box-shadow: 0 8px 30px rgba(249, 115, 22, 0.6);
+}
+
 .waveform-container {
   background: rgba(4, 8, 19, 0.6);
   border-radius: 12px;

@@ -481,7 +481,7 @@ const videoTracks = [
   {
     title: 'Atmósfera Urbana',
     sub: 'Cortometraje • 2024',
-    thumb: '/imagen3.png',
+    thumb: '/imagen-film1.png',
     src: 'dQw4w9WgXcQ'
   },
   {
