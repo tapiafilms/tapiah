@@ -243,6 +243,8 @@ function initAudioPlayer2() {
       playBtn.style.boxShadow = '0 6px 20px rgba(56, 189, 248, 0.4)';
     });
   }
+
+  renderWaveformCanvas2();
 }
 
 function toggleAudioPlay2() {
@@ -342,6 +344,52 @@ function renderWaveformCanvas() {
     }
 
     animFrameId = requestAnimationFrame(draw);
+  }
+
+  draw();
+}
+
+function renderWaveformCanvas2() {
+  const canvas = document.getElementById('waveform-canvas-2');
+  if (!canvas) return;
+
+  const ctx = canvas.getContext('2d');
+  const width = canvas.width = canvas.parentElement.clientWidth || 500;
+  const height = canvas.height = 40;
+
+  const barCount = 45;
+  const barWidth = width / barCount - 3;
+  let phase = 0;
+
+  function draw() {
+    ctx.clearRect(0, 0, width, height);
+
+    for (let i = 0; i < barCount; i++) {
+      let barHeight;
+      if (isPlaying2) {
+        barHeight = Math.sin(phase + i * 0.2) * 14 + Math.cos(phase * 1.5 + i * 0.1) * 8 + 18;
+      } else {
+        barHeight = Math.sin(i * 0.3) * 4 + 8;
+      }
+
+      const x = i * (barWidth + 3);
+      const y = (height - barHeight) / 2;
+
+      const grad = ctx.createLinearGradient(0, y, 0, y + barHeight);
+      grad.addColorStop(0, '#f97316');
+      grad.addColorStop(1, '#fb923c');
+
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.roundRect(x, y, barWidth, barHeight, 3);
+      ctx.fill();
+    }
+
+    if (isPlaying2) {
+      phase += 0.1;
+    }
+
+    requestAnimationFrame(draw);
   }
 
   draw();
